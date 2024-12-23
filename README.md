@@ -2,6 +2,10 @@
 
 A simple Batch script to easily change your IPv4 DNS settings to commonly used DNS providers. The script allows you to choose between multiple DNS configurations and apply them with a single selection. It also includes administrator privilege checks to ensure proper execution.
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/37782bd4-0980-4266-be42-d9e68f8c6455"/>
+</p>
+
 ## Features
 
 - Change DNS settings to various popular providers, including:
