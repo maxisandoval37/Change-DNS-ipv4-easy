@@ -85,7 +85,7 @@ for %%I in (%INTERFACES%) do (
 goto success
 
 :set_dns
-echo Setting DNS to %DNS1% and %DNS2%...
+echo Setting DNS to %DNS1%and %DNS2%...
 for %%I in (%INTERFACES%) do (
     call :set_dns_static %%I %DNS1% %DNS2%
 )
