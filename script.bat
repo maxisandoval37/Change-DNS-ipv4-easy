@@ -53,6 +53,7 @@ echo 7) Cloudflare+Family Protection (1.1.1.3, 1.0.0.3)
 echo 8) Google (8.8.8.8, 8.8.4.4)
 echo 9) Cisco OpenDNS Home (208.67.222.222, 208.67.220.220)
 echo 10) Cisco OpenDNS FamilyShield (208.67.222.123, 208.67.220.123)
+echo 11) Display Current DNS Settings
 
 echo.
 echo 0) Exit
@@ -61,6 +62,7 @@ echo =====================================================================
 echo.
 
 set /p option="Select an option: "
+echo.
 
 if "%option%"=="1" goto default
 if "%option%"=="2" set DNS1=94.140.14.14 && set DNS2=94.140.15.15 && goto set_dns
@@ -72,6 +74,7 @@ if "%option%"=="7" set DNS1=1.1.1.3 && set DNS2=1.0.0.3 && goto set_dns
 if "%option%"=="8" set DNS1=8.8.8.8 && set DNS2=8.8.4.4 && goto set_dns
 if "%option%"=="9" set DNS1=208.67.222.222 && set DNS2=208.67.220.220 && goto set_dns
 if "%option%"=="10" set DNS1=208.67.222.123 && set DNS2=208.67.220.123 && goto set_dns
+if "%option%"=="11" goto display_dns
 if "%option%"=="0" goto exit
 echo Invalid option, please try again.
 pause
@@ -105,6 +108,16 @@ goto :eof
 netsh interface ip set dns name=%1 static %2 primary >nul 2>&1
 netsh interface ip add dns name=%1 %3 index=2 >nul 2>&1
 goto :eof
+
+:display_dns
+echo Displaying current DNS settings...
+echo.
+nslookup localhost 2> nul
+if %errorlevel% neq 0 (
+    echo No DNS servers are configured.
+)
+pause
+goto menu
 
 :exit
 exit /b
