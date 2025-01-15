@@ -3,7 +3,7 @@
 A simple Batch script to easily change your IPv4 DNS settings to commonly used DNS providers. The script allows you to choose between multiple DNS configurations and apply them with a single selection. It also includes administrator privilege checks to ensure proper execution.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/37782bd4-0980-4266-be42-d9e68f8c6455"/>
+  <img src="https://github.com/user-attachments/assets/ecb231c7-9048-4efa-890f-bd63f1f33c67"/>
 </p>
 
 ## Features
@@ -41,6 +41,7 @@ A simple Batch script to easily change your IPv4 DNS settings to commonly used D
 | 8      | Google DNS                                | `8.8.8.8`, `8.8.4.4`                        |
 | 9      | Cisco OpenDNS Home                        | `208.67.222.222`, `208.67.220.220`          |
 | 10     | Cisco OpenDNS FamilyShield                | `208.67.222.123`, `208.67.220.123`          |
+| 11     | Display Current DNS Settings                | Display Current DNS Settings (via nslookup)         |
 | 0      | Exit                                      | Exits the script.                           |
 
 ## Requirements
