@@ -112,7 +112,7 @@ goto :eof
 :display_dns
 echo Displaying current DNS settings...
 echo.
-nslookup localhost 2> nul
+nslookup 127.0.0.1 2> nul
 if %errorlevel% neq 0 (
     echo No DNS servers are configured.
 )
